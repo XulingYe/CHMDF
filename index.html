@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CHMDF: Construction Humanoid Motion Deployment Framework</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>From AI Motion Generation to Real Humanoid Deployment: A Digital Workflow for Construction Robotics</h1>
+
+<h3>Preparing for <a href="https://www.iccbei2027.auckland.ac.nz/">ICCBEI 2027</a></h3>
+
+<h4>
+<a href="https://xulingye.github.io/"><b>Xuling Ye</b></a>,
+<a href="https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/stud_mitarbeiter/index.html.en">Wenyue Deng</a>,
+<a href="https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/markus_koenig.html.en">Markus König</a>
+</h4>
+
+<h5> Computing in Engineering, Faculty of Civil and Environmental Engineering, Ruhr Universi-ty Bochum, Germany</h5>
+
+<div class="logos-row">
+    <a href="https://www.ruhr-uni-bochum.de/"><img src="Images/logo_rub_blau.jpg" alt="RUB logo"></a>
+    <a href="https://www.inf.bi.ruhr-uni-bochum.de/"><img src="Images/logo_iib_en.png" alt="IIB logo"></a>
+</div>
+
+<hr>
+
+<h2>Abstract</h2>
+
+<p>
+Humanoid robots have recently attracted significant attention as a promising automation technology for construction due to their ability to operate within human-designed environments and perform human-like movements. How-ever, developing and deploying humanoid behaviors for real-world construction applications remain challenging because AI-generated motions must be adapted to robot-specific kinematics, validated for physical feasibility, and safely transferred from simulation to physical hardware. To address these challenges, this paper proposes a Construction Humanoid Motion Deployment Framework (CHMDF) that establishes an integrated simulation-to-real workflow for AI-generated humanoid motions. The framework combines Kimodo for motion generation, ProtoMotions for humanoid motion retargeting, MuJoCo for physics-based simulation, RoboJudo as the robot communication middleware, and the Unitree G1 humanoid robot for physical execution. The proposed workflow enables generated human-like motions to be systematically adapted, evaluated, and transferred to a physical humanoid platform while reducing development risks through simulation-first validation. A proof-of-concept demonstration using a simple whole-body motion is presented to verify the feasibility of the complete deployment pipeline. Alt-hough the demonstrated motion is intentionally simple, it validates the integration of the proposed framework and provides a reusable foundation for future construction-oriented humanoid applications. The proposed approach contributes a structured methodology for bridging AI-based motion generation and real humanoid deployment, supporting future research on inspection, facility management, human–robot collaboration, and other construction-related tasks.
+</p>
+
+<hr>
+<h2>Pipeline</h2>
+    <figure >
+        <img src="Images/method.png" alt="Pipeline">
+        <h4>Figure 1: CHMDF Pipeline</h4>
+    </figure>
+
+<hr>
+
+<h2>Upper-body hand-raising motion</h2>
+
+<div class="videos-row">
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Kimodo_hand_raising.mp4" type="video/mp4">
+        </video>
+        <h4>Video 1: Kimodo</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Mujoco_hand_raising.webm" type="video/webm">
+        </video>
+        <h4>Video 2: MuJoCo</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Mujoco_scene_hand_raising.webm" type="video/webm">
+        </video>
+        <h4>Video 3: MuJoCo with Scene</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/UnitreeG1_hand_raising_h264.mp4" type="video/mp4">
+        </video>
+        <h4>Video 4: Unitree G1</h4>
+    </figure>
+</div>
+
+<hr>
+
+<h2>Whole-body motion</h2>
+
+<div class="videos-row">
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Kimodo_bend_lift.mp4" type="video/mp4">
+        </video>
+        <h4>Video 1: Kimodo</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Mujoco_bend_lift.webm" type="video/webm">
+        </video>
+        <h4>Video 2: MuJoCo</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Mujoco_scene_bend_lift.webm" type="video/webm">
+        </video>
+        <h4>Video 3: MuJoCo with Scene</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/UnitreeG1_bend_lift_h264.mp4" type="video/mp4">
+        </video>
+        <h4>Video 4: Unitree G1</h4>
+    </figure>
+</div>
+
+<hr>
+
+<h2>Citation</h2>
+
+<p>
+Please cite the paper as follows:
+</p>
+
+<p><b>Xuling Ye, Wenyue Deng, Markus König</b>, From AI Motion Generation to Real Humanoid Deployment: A Digital Workflow for Construction Robotics, <i>ICCBEI 2027 (under review)</i>.</p>
+
+
+</div>
+
+</body>
+</html>

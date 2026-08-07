@@ -1,0 +1,88 @@
+body {
+    font-family: "Google Sans", Arial, sans-serif;
+    background: white;
+    color: #222;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section {
+    margin: 60px auto;
+}
+
+figure {
+    margin: 30px auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+video {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+p {
+    max-width: 850px;
+    margin: 20px auto;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.authors {
+    text-align: center;
+}
+
+.logos-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 16px 0 0;
+    flex-wrap: wrap;
+}
+
+.logos-row img {
+    display: block;
+    height: 80px;
+    margin: 0;
+}
+
+.videos-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: flex-start;
+}
+
+.video-item {
+    width: 40%;
+    margin: 0;
+    flex: 0 0 200px;
+}
+
+
+.video-item h4 {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.videos-row video {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
