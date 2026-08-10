@@ -10,7 +10,7 @@
 
 <div class="container">
 
-<h1>From AI Motion Generation to Real Humanoid Deployment: A Digital Workflow for Construction Robotics</h1>
+<h1>From AI Motion Generation to Real Humanoid Deployment: A No-Code Workflow for Construction Tasks</h1>
 
 <h3>Preparing for <a href="https://www.iccbei2027.auckland.ac.nz/">ICCBEI 2027</a></h3>
 
@@ -32,7 +32,7 @@
 <h2>Abstract</h2>
 
 <p>
-Humanoid robots have recently attracted significant attention as a promising automation technology for construction due to their ability to operate within human-designed environments and perform human-like movements. How-ever, developing and deploying humanoid behaviors for real-world construction applications remain challenging because AI-generated motions must be adapted to robot-specific kinematics, validated for physical feasibility, and safely transferred from simulation to physical hardware. To address these challenges, this paper proposes a Construction Humanoid Motion Deployment Framework (CHMDF) that establishes an integrated simulation-to-real workflow for AI-generated humanoid motions. The framework combines Kimodo for motion generation, ProtoMotions for humanoid motion retargeting, MuJoCo for physics-based simulation, RoboJudo as the robot communication middleware, and the Unitree G1 humanoid robot for physical execution. The proposed workflow enables generated human-like motions to be systematically adapted, evaluated, and transferred to a physical humanoid platform while reducing development risks through simulation-first validation. A proof-of-concept demonstration using a simple whole-body motion is presented to verify the feasibility of the complete deployment pipeline. Alt-hough the demonstrated motion is intentionally simple, it validates the integration of the proposed framework and provides a reusable foundation for future construction-oriented humanoid applications. The proposed approach contributes a structured methodology for bridging AI-based motion generation and real humanoid deployment, supporting future research on inspection, facility management, human–robot collaboration, and other construction-related tasks.
+Humanoid robots have recently attracted significant attention as a promising automation technology for construction due to their ability to operate within human-designed environments and perform human-like movements. However, developing and deploying humanoid behaviors for real-world construction applications remain challenging because humanoid motion development must bridge simulation and real robot systems while accounting for the physical constraints and environmental conditions of construction environments. To address these challenges, this paper proposes a Construction Humanoid Motion Deployment Framework (CHMDF) that establishes an integrated simulation-to-real workflow for AI-generated humanoid motions. The framework combines BIM-based simulation scene, Kimodo for motion generation, ProtoMotions for humanoid motion retargeting, MuJoCo for physics-based simulation, RoboJudo as the robot communication middleware, and the Unitree G1 humanoid robot for physical execution. The proposed workflow enables AI-generated humanoid motions to be systematically adapted, evaluated, and transferred to a physical humanoid platform while reducing development risks through simulation-first validation. A proof-of-concept demonstration is presented to verify the feasibility of proposed framework and provide a reusable foundation for future construction-oriented humanoid applications. The proposed approach contributes a structured methodology for bridging AI-based motion generation and real humanoid deployment, supporting future research on inspection, facility management, human-robot collaboration, and other construction-related tasks. 
 </p>
 
 <hr>
@@ -44,7 +44,38 @@ Humanoid robots have recently attracted significant attention as a promising aut
 
 <hr>
 
-<h2>Upper-body hand-raising motion</h2>
+<h2>Whole-body motion: An obstacle-removal action</h2>
+
+<div class="videos-row">
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Kimodo_bend_lift.mp4" type="video/mp4">
+        </video>
+        <h4>Video 1: Kimodo</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Mujoco_bend_lift.webm" type="video/webm">
+        </video>
+        <h4>Video 2: MuJoCo</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Mujoco_scene_bend_lift.webm" type="video/webm">
+        </video>
+        <h4>Video 3: MuJoCo with Scene</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/UnitreeG1_bend_lift_h264.mp4" type="video/mp4">
+        </video>
+        <h4>Video 4: Unitree G1</h4>
+    </figure>
+</div>
+
+<hr>
+
+<h2>Upper-body motion: An simple hand-raising action</h2>
 
 <div class="videos-row">
     <figure class="video-item">
@@ -75,32 +106,20 @@ Humanoid robots have recently attracted significant attention as a promising aut
 
 <hr>
 
-<h2>Whole-body motion</h2>
+<h2>Whole-body motion: A walking action simulation</h2>
 
 <div class="videos-row">
     <figure class="video-item">
         <video height="200" controls>
-            <source src="Videos/Kimodo_bend_lift.mp4" type="video/mp4">
+            <source src="Videos/Kimodo_walking.mp4" type="video/mp4">
         </video>
         <h4>Video 1: Kimodo</h4>
     </figure>
     <figure class="video-item">
         <video height="200" controls>
-            <source src="Videos/Mujoco_bend_lift.webm" type="video/webm">
+            <source src="Videos/Mujoco_walking.webm" type="video/webm">
         </video>
         <h4>Video 2: MuJoCo</h4>
-    </figure>
-    <figure class="video-item">
-        <video height="200" controls>
-            <source src="Videos/Mujoco_scene_bend_lift.webm" type="video/webm">
-        </video>
-        <h4>Video 3: MuJoCo with Scene</h4>
-    </figure>
-    <figure class="video-item">
-        <video height="200" controls>
-            <source src="Videos/UnitreeG1_bend_lift_h264.mp4" type="video/mp4">
-        </video>
-        <h4>Video 4: Unitree G1</h4>
     </figure>
 </div>
 
