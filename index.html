@@ -32,8 +32,7 @@
 <h2>Abstract</h2>
 
 <p>
-Humanoid robots have recently attracted significant attention as a promising automation technology for construction due to their ability to operate within human-designed environments and perform human-like movements. This capability creates an opportunity to extend robotic automation beyond highly structured, task-specific applications toward construction and building operation activities that remain largely dependent on human workers. However, developing and deploying humanoid behaviors for real-world construction applications remains challenging because humanoid motion development must bridge simulation and real robot systems while accounting for the physical constraints and environmental conditions of construction environments. To address these challenges, this paper proposes a Construction Humanoid Motion Deployment Framework (CHMDF) that establishes an integrated simulation-to-reality (sim-to-real) workflow for developing construction-oriented humanoid motions. The framework links construction task and scene information with text-to-motion generation, motion adaptation, simulation-based validation, and physical robot execution. The proposed workflow enables AI-generated humanoid motions to be systematically adapted, evaluated, and transferred to a physical humanoid platform while reducing development risks through simulation-first validation. A proof-of-concept demonstration is presented to verify the feasibility of proposed framework and provide a reusable foundation for future construction-oriented humanoid applications. The proposed approach contributes a structured methodology for bridging AI-based motion generation and real humanoid deployment, supporting future research on inspection, facility management, human-robot collaboration, and other construction-related tasks. 
-</p>
+Humanoid robots have recently attracted significant attention as a promising automation technology for construction due to their ability to operate within human-designed environments and perform human-like movements. This capability creates an opportunity to extend robotic automation beyond highly structured, task-specific applications toward construction and building operation activities that remain largely dependent on human workers. However, their deployment in construction remains challenging because humanoid motion development must bridge various software and hardware systems while accounting for the physical constraints and spatial conditions of construction environments. This paper proposes a Construction Humanoid Motion Deployment Framework (CHMDF) that establishes an integrated simulation-to-reality (sim-to-real) workflow for developing construction-oriented humanoid motions. The framework connects construction-oriented task definition and BIM-based scene representation with AI-based motion generation, robot-specific motion adaptation, physics-based simulation, and physical robot execution. Unlike general-purpose humanoid motion pipelines, CHMDF incorporates construction activities and BIM-derived spatial information to contextualize motion development and evaluate humanoid behavior within representative built environments. The framework is implemented using Kimodo, ProtoMotions, MuJoCo, RoboJudo, and the Unitree G1 humanoid robot. A proof-of-concept demonstration, involving a construction-related obstacle-relocation motion and a wall-collision example, illustrates the workflow from motion generation and simulation-based evaluation to physical robot execution. The results provide an initial demonstration of the feasibility of the proposed workflow and its potential to support the systematic development and evaluation of humanoid motions for construction applications.</p>
 
 <hr>
 <h2>Pipeline</h2>
@@ -45,7 +44,8 @@ Humanoid robots have recently attracted significant attention as a promising aut
 
 <hr>
 
-<h2>Obstacle-Removal Motion: AI Generation and Iterative Refinement</h2>
+<h2>Obstacle-Relocation Motion</h2>
+<h3>Part 1: AI Generation and Iterative Refinement</h3>
 
 <div class="videos-row">
     <figure class="video-item">
@@ -75,7 +75,7 @@ Humanoid robots have recently attracted significant attention as a promising aut
 </div>
 <hr>
 
-<h2>Obstacle-Removal Motion: Successful Simulation-to-Real Deployment</h2>
+<h3>Part 2: Successful Sim-to-Real Deployment</h3>
 
 <div class="videos-row">
     <figure class="video-item">
@@ -106,7 +106,62 @@ Humanoid robots have recently attracted significant attention as a promising aut
 
 <hr>
 
-<h2>Humanoid Upper-Body Motion: Hand-Waving Demonstration</h2>
+<h3>Additional Join Change Diagrams in Kimodo, ProtoMotions (MuJoCo), RoboJuDo (MuJoCo), and Unitree G1 </h3>
+<h4>Part 1: Left Shoulder</h4>
+    <figure >
+        <img src="Images/diagram-left_shoulder.png" alt="left_shoulder">
+    </figure>
+<h4>Part 2: Right Ankle</h4>
+    <figure >
+        <img src="Images/diagram-right_ankle.png" alt="right_ankle">
+    </figure>
+<h4>Part 3: Right Hip</h4>
+    <figure >
+        <img src="Images/diagram-right_hip.png" alt="right_hip">
+    </figure>
+<h4>Part 4: All tested data sources</h4>
+    <a src="Data/Kimodo_1_trial.csv"> Tested Kimodo Data (All five trials are the same, only one provided) </a>
+    <a src="Data/Protomotion_mujoco_trial_01.csv"> Tested ProtoMotions (MuJoCo) Data - Trial 01  </a>
+    <a src="Data/Protomotion_mujoco_trial_02.csv"> Tested ProtoMotions (MuJoCo) Data - Trial 02  </a>
+    <a src="Data/Protomotion_mujoco_trial_03.csv"> Tested ProtoMotions (MuJoCo) Data - Trial 03  </a>
+    <a src="Data/Protomotion_mujoco_trial_04.csv"> Tested ProtoMotions (MuJoCo) Data - Trial 04  </a>
+    <a src="Data/Protomotion_mujoco_trial_05.csv"> Tested ProtoMotions (MuJoCo) Data - Trial 05  </a>
+    <a src="Data/Robojudo_mujoco_all_5_trials.csv"> Tested RoboJuDo (MuJoCo) Data (All five trials in one file) </a>
+    <a src="Data/UnitreeG1_all_5_trials.csv"> Tested Unitree G1 Data (All five trials in one file) </a>
+<hr>  
+
+<h2>Wall-Collision Example: BIM-Based Scene Interaction and Validation</h2>
+
+<div class="videos-row">
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Kimodo_walking.mp4" type="video/mp4">
+        </video>
+        <h4>Video 1: AI-based motion generation (Kimodo)</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Mujoco_walking.webm" type="video/webm">
+        </video>
+        <h4>Video 2: Physics-based simulation (MuJoCo)</h4>
+    </figure>
+    <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Scene_hitting_wall.webm" type="video/webm">
+        </video>
+        <h4>Video 3: Walking motion with wall collision in BIM-generated scene (MuJoCo)</h4>
+    </figure>
+        <figure class="video-item">
+        <video height="200" controls>
+            <source src="Videos/Scene_wall_collision_BIM.webm" type="video/webm">
+        </video>
+        <h4>Video 4: Wall-collision event with Wall GUID displayed</h4>
+    </figure>
+</div>
+
+<hr>
+
+<h2>Additional Humanoid Upper-Body Motion: Hand-Waving Demonstration</h2>
 
 <div class="videos-row">
     <figure class="video-item">
@@ -132,31 +187,6 @@ Humanoid robots have recently attracted significant attention as a promising aut
             <source src="Videos/UnitreeG1_wave_hands_h264.mp4" type="video/mp4">
         </video>
         <h4>Video 4: Real robot deployment (Unitree G1)</h4>
-    </figure>
-</div>
-
-<hr>
-
-<h2>Humanoid Walking Motion: BIM-Based Scene Validation</h2>
-
-<div class="videos-row">
-    <figure class="video-item">
-        <video height="200" controls>
-            <source src="Videos/Kimodo_walking.mp4" type="video/mp4">
-        </video>
-        <h4>Video 1: AI-based motion generation (Kimodo)</h4>
-    </figure>
-    <figure class="video-item">
-        <video height="200" controls>
-            <source src="Videos/Mujoco_walking.webm" type="video/webm">
-        </video>
-        <h4>Video 2: Physics-based simulation (MuJoCo)</h4>
-    </figure>
-    <figure class="video-item">
-        <video height="200" controls>
-            <source src="Videos/Scene_hitting_wall.webm" type="video/mp4">
-        </video>
-        <h4>Video 3: Walking motion with wall collision in BIM-generated scene (MuJoCo)</h4>
     </figure>
 </div>
 
