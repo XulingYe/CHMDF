@@ -39,6 +39,10 @@ p {
     text-align: justify;
 }
 
+.section-title {
+    text-align: left;
+}
+
 .authors {
     text-align: center;
 }
